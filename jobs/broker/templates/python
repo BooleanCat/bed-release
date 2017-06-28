@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+
+export PYTHONPATH=/var/vcap/packages/bed-broker/lib/python3.6/site-packages
+
+/var/vcap/packages/bed-python/bin/python3

@@ -5,3 +5,5 @@ packages:
 - bed-python
 - bed-bosh-cli
 - bed-broker
+templates:
+  python: bin/python
