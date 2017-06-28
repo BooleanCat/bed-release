@@ -1,0 +1,26 @@
+---
+name: bed
+
+instance_groups:
+- name: broker
+  instances: 1
+  jobs: []
+  vm_type: ((broker_vm_type))
+  networks: ((broker_networks))
+  azs: ((broker_azs))
+  stemcell: ubuntu-trusty
+
+releases:
+- name: bed-release
+  version: latest
+
+stemcells:
+- alias: ubuntu-trusty
+  os: ubuntu-trusty
+  version: 3421.latest
+
+update:
+  canaries: 1
+  canary_watch_time: 30000-180000
+  max_in_flight: 6
+  update_watch_time: 30000-180000

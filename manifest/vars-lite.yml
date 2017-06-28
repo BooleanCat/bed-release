@@ -1,0 +1,4 @@
+---
+broker_vm_type: default
+broker_networks: [{name: default}]
+broker_azs: [default]
