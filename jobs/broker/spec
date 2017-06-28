@@ -3,3 +3,4 @@ name: broker
 packages:
 - bed-nginx
 - bed-python
+- bed-bosh-cli
