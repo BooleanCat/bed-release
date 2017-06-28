@@ -1,0 +1,4 @@
+---
+name: bed-broker
+dependencies: [bed-python]
+files: [bed-broker/requirements.txt]

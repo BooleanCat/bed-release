@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+/var/vcap/packages/bed-python/bin/pip3 \
+  install \
+  "--prefix=${BOSH_INSTALL_TARGET}" \
+  -r bed-broker/requirements.txt
