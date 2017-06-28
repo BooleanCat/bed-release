@@ -1,3 +1,5 @@
 ---
 name: broker
-packages: [bed-nginx]
+packages:
+- bed-nginx
+- bed-python
