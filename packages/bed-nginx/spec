@@ -1,0 +1,3 @@
+---
+name: bed-nginx
+files: [nginx/nginx-1.12.0.tar.gz]

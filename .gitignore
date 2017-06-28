@@ -1,2 +1,5 @@
 .envrc
 secrets/
+blobs/
+.dev_builds/
+dev_releases/

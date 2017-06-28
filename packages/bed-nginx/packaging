@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+NGINX_VERSION=1.12.0
+
+tar xzf "nginx/nginx-${NGINX_VERSION}.tar.gz"
+
+cd "nginx-${NGINX_VERSION}"
+
+./configure \
+  "--prefix=${BOSH_INSTALL_TARGET}" \
+  --with-http_ssl_module \
+  --without-http_rewrite_module
+
+make
+make install

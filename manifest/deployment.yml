@@ -4,14 +4,16 @@ name: bed
 instance_groups:
 - name: broker
   instances: 1
-  jobs: []
+  jobs:
+  - name: broker
+    release: bed
   vm_type: ((broker_vm_type))
   networks: ((broker_networks))
   azs: ((broker_azs))
   stemcell: ubuntu-trusty
 
 releases:
-- name: bed-release
+- name: bed
   version: latest
 
 stemcells:

@@ -1,1 +1,9 @@
+---
 name: bed
+blobstore:
+  provider: s3
+  options:
+    bucket_name: booleancat-bed-release-blobs
+    region: eu-west-2
+    endpoint: s3.eu-west-2.amazonaws.com
+    credentials_source: env_or_profile
