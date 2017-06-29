@@ -8,7 +8,7 @@ vm_types:
       size: 1024
       type: gp2
 compilation:
-  workers: 1
+  workers: 2
   network: default
   az: default
   reuse_compilation_vm: true
