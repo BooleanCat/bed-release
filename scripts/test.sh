@@ -4,6 +4,14 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 RELEASE_DIR="$( dirname "$DIR" )"
 
-shellcheck "${DIR}/test.sh"
-find "${RELEASE_DIR}/packages" -name packaging -print0 | xargs -0 shellcheck
-shellcheck "${RELEASE_DIR}/jobs/broker/templates/python"
+find_bash_scripts() {
+  find \
+    "${RELEASE_DIR}/jobs" \
+    "${RELEASE_DIR}/packages" \
+    "${RELEASE_DIR}/scripts" \
+    "${RELEASE_DIR}/src" \
+    -type f -print0 \
+    | xargs -0 grep -l '^#!/usr/bin/env bash$'
+}
+
+find_bash_scripts | xargs shellcheck
