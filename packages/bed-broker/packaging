@@ -5,3 +5,5 @@ set -e
   install \
   "--prefix=${BOSH_INSTALL_TARGET}" \
   -r bed-broker/requirements.txt
+
+cp bed-broker/* "${BOSH_INSTALL_TARGET}/"

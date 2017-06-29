@@ -7,3 +7,6 @@ packages:
 - bed-broker
 templates:
   python: bin/python
+  broker/uwsgi.ini: config/uwsgi.ini
+  broker/start.sh: bin/broker/start.sh
+  broker/stop.sh: bin/broker/stop.sh

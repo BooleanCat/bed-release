@@ -1,4 +1,6 @@
 ---
 name: bed-broker
 dependencies: [bed-python]
-files: [bed-broker/requirements.txt]
+files:
+- bed-broker/requirements.txt
+- bed-broker/**/*.py
