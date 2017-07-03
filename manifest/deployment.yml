@@ -7,6 +7,10 @@ instance_groups:
   jobs:
   - name: broker
     release: bed
+    properties:
+      broker:
+        username: broker
+        password: ((broker_password))
   vm_type: ((broker_vm_type))
   networks: ((broker_networks))
   azs: ((broker_azs))
@@ -26,3 +30,7 @@ update:
   canary_watch_time: 30000-180000
   max_in_flight: 6
   update_watch_time: 30000-180000
+
+variables:
+- name: broker_password
+  type: password

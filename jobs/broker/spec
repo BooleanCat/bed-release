@@ -1,17 +1,24 @@
 ---
 name: broker
+
 packages:
 - bed-nginx
 - bed-python
 - bed-bosh-cli
 - bed-broker
+
 templates:
   python: bin/python
 
   broker/uwsgi.ini: config/uwsgi.ini
+  broker/broker.json.erb: config/broker.json
   broker/start.sh: bin/broker/start.sh
   broker/stop.sh: bin/broker/stop.sh
 
   nginx/nginx.conf: config/nginx.conf
   nginx/start.sh: bin/nginx/start.sh
   nginx/stop.sh: bin/nginx/stop.sh
+
+properties:
+  broker.username: {}
+  broker.password: {}
